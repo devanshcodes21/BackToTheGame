@@ -14,9 +14,9 @@ class Solution{
     {
         return string1;
     } else if(temp > 0) {
-        return string1;
-    } else {
         return string2;
+    } else {
+        return string1;
     }
   }
 
@@ -34,7 +34,7 @@ class Solution{
         {
             if(it.second == greatest_frequency)
             {
-                answer = answer == "" ? answer : checkLexiSmallerString(it.first, answer);
+                answer = answer == "" ? it.first : checkLexiSmallerString(it.first, answer);
             }
         }
         return {answer, to_string(greatest_frequency)};
